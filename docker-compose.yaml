@@ -35,7 +35,7 @@ services:
       - "8079:80"
     environment:
       SRH_MODE: env
-      SRH_TOKEN: example_token
+      SRH_TOKEN: nugPcd43b7ZmmKfhz9uxM0X1rgb0Wtb5
       SRH_CONNECTION_STRING: "redis://redis:6379"
     depends_on:
       redis:
@@ -56,10 +56,10 @@ services:
     environment:
       - NODE_ENV=production
       - DATABASE_URL=postgresql://opencut:opencutthegoat@db:5432/opencut
-      - BETTER_AUTH_URL=http://localhost:3000
-      - BETTER_AUTH_SECRET=your-production-secret-key-here
+      - BETTER_AUTH_URL=https://open-cut.dowi.es
+      - BETTER_AUTH_SECRET=H8ediSWyN0dLUni2uREAagbz99n8G5bc
       - UPSTASH_REDIS_REST_URL=http://serverless-redis-http:80
-      - UPSTASH_REDIS_REST_TOKEN=example_token
+      - UPSTASH_REDIS_REST_TOKEN=nugPcd43b7ZmmKfhz9uxM0X1rgb0Wtb5
     depends_on:
       db:
         condition: service_healthy
